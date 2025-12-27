@@ -2,25 +2,45 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
-      System.out.println("Enter a value: ");
+      System.out.println("How many time do you want to play this game?");
+      int n=sc.nextInt();
+      int count1=0;
+      int count2=0;
+      for(int i=0;i<n;i++){
       char p1=sc.next().charAt(0);
       char p2=sc.next().charAt(0);
       if(p1=='R' && p2=='S'){
-      System.out.println("p1 is wins");}
+      count1++;
+     }
       else if(p1=='S'&&p2=='P'){
-      System.out.println("p1 is wins");}
+      count1++;
+     }
       else if(p1=='P'&&p2=='S'){
-      System.out.println("p2 is wins");}
+      count2++;
+      }
       else if(p1=='S'&&p2=='R'){
-      System.out.println("p2 is wins");}
+          
+      count2++;
+      }
       else if(p1=='R'&&p2=='P'){
-      System.out.println("p2 is wins");}
+      count2++;
+      }
       else if(p1=='P'&&p2=='R'){
-      System.out.println("p1 is wins");}
-      else if(p1==p2){
-      System.out.println("Tie");}
+      count1++;
+      }
+      
       else{
           System.out.println("Invalid");
+      }}
+      if(count1>count2){
+          System.out.println("p1 is win");
       }
-    }
+          else if(count1<count2){
+              System.out.println("p2 is win");
+          }
+          else{
+              System.out.println("Tie");
+          }
+      }
+    
 }
